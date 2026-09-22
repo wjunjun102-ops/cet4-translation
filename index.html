@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET4 翻译真题 · 高频词自动发音助手</title>
+<meta name="description" content="大学英语四级翻译真题（2019—2026）在线练习：段落汉译英实战，先自主作答，再对照参考译文与考点。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ==================== 侧栏 ==================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 9v6h3l4.5 3.5v-13L7 9H4z" fill="#2b2b2b" stroke="none"/>
+          <path d="M15.5 9.2a4 4 0 0 1 0 5.6"/>
+          <path d="M18 6.8a7.6 7.6 0 0 1 0 10.4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">CET4</div>
+        <div class="brand-sub">高频词 · 自动发音助手</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item" data-view="study">
+        <span class="nav-ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5z"/>
+            <path d="M7 11v5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-5"/>
+            <path d="M21 8.5v5"/>
+          </svg>
+        </span>
+        <span class="nav-text"><span class="nav-t">学习</span><span class="nav-d">新词卡片 · 自动发音</span></span>
+      </button>
+
+      <button class="nav-item" data-view="vocab">
+        <span class="nav-ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 5.5A2 2 0 0 1 6 3.5h5v17H6a2 2 0 0 0-2 2z"/>
+            <path d="M20 5.5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 1 2 2z"/>
+          </svg>
+        </span>
+        <span class="nav-text"><span class="nav-t">词库</span><span class="nav-d">真题词频分级检索</span></span>
+      </button>
+
+      <button class="nav-item" data-view="review">
+        <span class="nav-ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 9a8 8 0 0 1 13.5-4.5L20 7"/>
+            <path d="M20 4v3.5h-3.5"/>
+            <path d="M20 15a8 8 0 0 1-13.5 4.5L4 17"/>
+            <path d="M4 20v-3.5h3.5"/>
+          </svg>
+        </span>
+        <span class="nav-text"><span class="nav-t">复习</span><span class="nav-d">间隔重复自评</span></span>
+        <span class="nav-badge" id="reviewBadge">0</span>
+      </button>
+
+      <button class="nav-item active" data-view="trans">
+        <span class="nav-ico nav-ico--txt">文A</span>
+        <span class="nav-text"><span class="nav-t">翻译真题</span><span class="nav-d">段落汉译英实战</span></span>
+      </button>
+
+      <button class="nav-item" data-view="stats">
+        <span class="nav-ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 20V4"/>
+            <path d="M4 20h16"/>
+            <path d="M8 20v-6"/>
+            <path d="M13 20V9"/>
+            <path d="M18 20v-9"/>
+          </svg>
+        </span>
+        <span class="nav-text"><span class="nav-t">统计</span><span class="nav-d">进度与记忆强度</span></span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- ==================== 主区 ==================== -->
+  <main class="content">
+
+    <!-- ---------- 翻译真题 ---------- -->
+    <section class="page on" id="page-trans">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">翻译真题</h1>
+          <p class="page-sub">段落汉译英实战 · 先自主作答，再对照参考译文与考点</p>
+        </div>
+        <div class="page-counter" id="counter">第 1 / 1 题 · 按新到旧排序</div>
+      </header>
+      <hr class="rule">
+
+      <div class="filters" id="filters"></div>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="chip" id="qLabel"></span>
+          <span class="card-src" id="qSrc"></span>
+        </div>
+        <hr class="hr-soft">
+        <div class="sec-head">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 3v5h5"/>
+            <path d="M9 13h6M9 17h4"/>
+          </svg>
+          中文原文
+          <span class="sec-note">（请翻译为英文）</span>
+        </div>
+        <p class="passage" id="qPassage"></p>
+      </article>
+
+      <div class="block">
+        <div class="actions">
+          <button class="btn primary" id="btnReveal">显示参考译文与考点</button>
+          <span class="hint">快捷键：← / → 翻题 · Ctrl / ⌘ + Enter 显示参考</span>
+        </div>
+      </div>
+
+      <div id="answerPanels" hidden>
+        <div class="panel">
+          <h3 class="panel-title">参考译文 Reference Translation</h3>
+          <p class="answer-en" id="qEn"></p>
+        </div>
+        <div class="panel">
+          <h3 class="panel-title">重点词汇 Key Vocabulary</h3>
+          <div class="words" id="qWords"></div>
+        </div>
+        <div class="panel">
+          <h3 class="panel-title">考点解析 Key Points</h3>
+          <ul class="points" id="qPoints"></ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <div class="pager-side">
+          <button class="btn" id="btnPrev">← 上一题</button>
+          <button class="btn" id="btnNext">下一题 →</button>
+        </div>
+        <div class="rate">
+          <span class="rate-label">记忆自评：</span>
+          <button class="rate-btn" data-rate="hard">不熟</button>
+          <button class="rate-btn" data-rate="mid">一般</button>
+          <button class="rate-btn" data-rate="easy">熟练</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 学习 ---------- -->
+    <section class="page" id="page-study">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">学习</h1>
+          <p class="page-sub">新词卡片 · 自动发音 · 全部取自历年四级翻译真题重点词汇</p>
+        </div>
+        <div class="page-counter" id="studyCounter"></div>
+      </header>
+      <hr class="rule">
+      <div class="flash-wrap">
+        <div class="flash">
+          <div class="flash-index" id="flashIndex"></div>
+          <div class="flash-zh" id="flashZh"></div>
+          <div class="flash-en" id="flashEn"></div>
+          <div class="flash-src" id="flashSrc"></div>
+        </div>
+        <div class="actions" style="justify-content:center">
+          <button class="btn" id="btnFlashPrev">← 上一张</button>
+          <button class="btn primary" id="btnSpeak">🔊 发音</button>
+          <button class="btn" id="btnFlip">隐藏 / 显示释义</button>
+          <button class="btn" id="btnFlashNext">下一张 →</button>
+          <label class="hint" style="display:flex;align-items:center;gap:6px;cursor:pointer">
+            <input type="checkbox" id="autoSpeak"> 自动发音
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 词库 ---------- -->
+    <section class="page" id="page-vocab">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">词库</h1>
+          <p class="page-sub">真题词频分级检索 · 按出现次数排序，可跳回原题</p>
+        </div>
+        <div class="page-counter" id="vocabCounter"></div>
+      </header>
+      <hr class="rule">
+      <div class="toolbar">
+        <input class="input" id="vocabSearch" placeholder="搜索中文或英文…">
+        <select class="select" id="vocabYear"><option value="">全部年份</option></select>
+        <label class="hint" style="display:flex;align-items:center;gap:6px;cursor:pointer">
+          <input type="checkbox" id="vocabSpeak"> 点击单词自动发音
+        </label>
+      </div>
+      <div class="vocab-list" id="vocabList"></div>
+    </section>
+
+    <!-- ---------- 复习 ---------- -->
+    <section class="page" id="page-review">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">复习</h1>
+          <p class="page-sub">间隔重复自评 · 按自评结果安排下一次复习时间</p>
+        </div>
+        <div class="page-counter" id="reviewCounter"></div>
+      </header>
+      <hr class="rule">
+      <div class="panel" style="margin-top:0">
+        <h3 class="panel-title">今日待复习</h3>
+        <div class="list" id="dueList"></div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">已自评题目</h3>
+        <div class="list" id="ratedList"></div>
+      </div>
+    </section>
+
+    <!-- ---------- 统计 ---------- -->
+    <section class="page" id="page-stats">
+      <header class="page-head">
+        <div>
+          <h1 class="page-title">统计</h1>
+          <p class="page-sub">进度与记忆强度 · 数据保存在本机浏览器中</p>
+        </div>
+        <div class="page-counter" id="statsCounter"></div>
+      </header>
+      <hr class="rule">
+      <div class="stat-grid" id="statGrid"></div>
+      <div class="panel">
+        <h3 class="panel-title">分年份完成情况</h3>
+        <div class="list" id="yearProgress"></div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">数据管理</h3>
+        <div class="actions" style="margin-top:0">
+          <button class="btn soft" id="btnExport">导出学习记录（JSON）</button>
+          <button class="btn soft" id="btnReset">清空本机记录</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/data-a.js"></script>
+<script src="assets/data-b.js"></script>
+<script src="assets/data-c.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
